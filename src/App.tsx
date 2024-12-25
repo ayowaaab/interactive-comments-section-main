@@ -1,5 +1,11 @@
+import Comment from "./components/Comment";
+
 const App = () => {
-  return <div className="">App</div>;
+  return (
+    <>
+      <Comment />
+    </>
+  );
 };
 
 export default App;
