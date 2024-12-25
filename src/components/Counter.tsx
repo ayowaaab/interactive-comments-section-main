@@ -5,7 +5,7 @@ const Counter = ({ init = 0 }: { init: number }) => {
   return (
     <div className="flex flex-row md:flex-col items-center justify-center gap-3 bg-neutral-veryLightGray p-3 rounded-lg">
       <img
-        className="w-6 cursor-pointer hover:opacity-50"
+        className="w-3 md:w-6 cursor-pointer hover:opacity-50"
         onClick={() => setCounter(counter + 1)}
         style={{
           filter:
@@ -23,7 +23,7 @@ const Counter = ({ init = 0 }: { init: number }) => {
           filter:
             "brightness(0) saturate(100%) invert(34%) sepia(42%) saturate(1139%) hue-rotate(204deg) brightness(93%) contrast(88%)",
         }}
-        className="w-6 cursor-pointer hover:opacity-50"
+        className="w-3 md:w-6 cursor-pointer hover:opacity-50"
         src="./images/icon-minus.svg"
         alt="minus-icon"
       />
