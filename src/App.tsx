@@ -3,13 +3,13 @@ import Reply from "./components/Reply";
 import * as data from "./assets/data.json";
 const App = () => {
   return (
-    <div className="w-3/5 mx-auto">
+    <div className=" xl:w-3/5 lg:w-4/5 mx-auto">
       {data.comments.map((comment) => (
         <div>
           <CommentBlock key={comment.id} comment={comment} />
-          <div className="border-l-2 pl-12 ml-20 ">
+          <div className="border-l-2 md:pl-12 md:ml-20  ml-10">
             {comment.replies.map((reply) => (
-              <CommentBlock key={reply.id} reply={reply} />
+              <CommentBlock key={reply.id+10} reply={reply} />
             ))}
           </div>
         </div>
