@@ -1,7 +1,7 @@
 import React from "react";
 
-const Counter = () => {
-  const [counter, setCounter] = React.useState(0);
+const Counter = ({init=0}:{init:number}) => {
+  const [counter, setCounter] = React.useState(init);
   return (
     <div className="flex flex-col items-center justify-center gap-3 bg-neutral-veryLightGray p-3 rounded-lg">
       <img

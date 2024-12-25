@@ -14,7 +14,7 @@ const Reply = () => {
         }
       />
       <div>
-        <Button text="reply" type="active" />
+        <Button text="Send" type="button" />
       </div>
     </div>
   );
