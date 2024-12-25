@@ -14,7 +14,7 @@ const Counter = ({ init = 0 }: { init: number }) => {
         src="./images/icon-plus.svg"
         alt="plus-icon"
       />
-      <p className="font-bold text-xs md:text-sm lg:text-lg text-primary-moderateBlue">
+      <p className="font-bold text-xs md:text-sm  text-primary-moderateBlue">
         {counter}
       </p>
       <img

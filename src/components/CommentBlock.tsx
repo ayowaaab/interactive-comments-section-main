@@ -1,6 +1,7 @@
 import Button from "./Button";
 import Counter from "./Counter";
 interface Props {
+  onOpen: () => void;
   comment?: {
     id: number;
     content: string;
@@ -43,7 +44,7 @@ interface Props {
     };
   };
 }
-const CommentBlock: React.FC<Props> = ({ comment, reply }) => {
+const CommentBlock: React.FC<Props> = ({ comment, reply, onOpen }) => {
   const data = comment! || reply!;
   const currentUser = data.user.username === "juliusomo";
   return (
@@ -52,7 +53,11 @@ const CommentBlock: React.FC<Props> = ({ comment, reply }) => {
       <div className="flex flex-col gap-4">
         <div className="flex justify-between">
           <div className="flex items-center md:gap-2 gap-1">
-            <img src={data.user.image.png} className="md:w-10 w-7" alt="avatar" />
+            <img
+              src={data.user.image.png}
+              className="md:w-10 w-7"
+              alt="avatar"
+            />
             <h1 className="text-neutral-darkBlue font-semibold flex gap-1 items-center text-sm lg:text-lg">
               {data.user.username}
               {currentUser && (
@@ -61,18 +66,31 @@ const CommentBlock: React.FC<Props> = ({ comment, reply }) => {
                 </span>
               )}
             </h1>
-            <span className="text-neutral-grayishBlue text-sm lg:text-lg">{data.createdAt}</span>
+            <span className="text-neutral-grayishBlue text-sm lg:text-lg">
+              {data.createdAt}
+            </span>
           </div>
           {!currentUser ? (
             <Button text="Reply" type="iconButton" icon="reply" />
           ) : (
-            <div className="flex gap-2">
-              <Button text="Delete" type="iconButton" icon="delete" />
-              <Button text="Edit" type="iconButton" icon="edit" />
+            <div className="flex gap-3">
+              <div onClick={onOpen}>
+                <Button
+                  color="red"
+                  text="Delete"
+                  type="iconButton"
+                  icon="delete"
+                />
+              </div>
+              <div>
+                <Button text="Edit" type="iconButton" icon="edit" />
+              </div>
             </div>
           )}
         </div>
-        <p className="text-neutral-grayishBlue text-xs md:text-sm lg:text-lg">{data.content}</p>
+        <p className="text-neutral-grayishBlue text-xs md:text-sm lg:text-lg">
+          {data.content}
+        </p>
       </div>
     </div>
   );
