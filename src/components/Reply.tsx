@@ -1,9 +1,12 @@
-import React from 'react'
 
 const Reply = () => {
   return (
-    <div>
-        <img src="" alt="" />
+    <div className="">
+        <img src="./images/avatars/image-amyrobson.png" alt="avatar" />
+        <textarea name="" id="">
+            
+        </textarea>
+        <button>Reply</button>
     </div>
   )
 }

@@ -16,7 +16,7 @@ const Comment = () => {
             <h1 className="text-neutral-darkBlue font-semibold">amyrobson</h1>
             <span className="text-neutral-grayishBlue">1 Month ago</span>
           </div>
-          <Button text="Reply" type="active" />
+          <Button text="Reply" type="inactive" />
         </div>
 
         <p className="text-neutral-grayishBlue text-lg">

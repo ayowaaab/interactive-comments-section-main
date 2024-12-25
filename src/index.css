@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body{
-background-color: #f5f6fa;
+* {
+  transition: 150ms;
+}
+body {
+  background-color: #f5f6fa;
 }
